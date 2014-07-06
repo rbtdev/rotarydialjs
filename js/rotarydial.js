@@ -1,11 +1,6 @@
 
 function RotaryDial(title,parent,name, min,max, size, onChanging, onChanged)
 {
-	this.create(title, parent, name, min, max, size, onChanging, onChanged);
-	
-};
-
-RotaryDial.prototype.create = function(title,parent,name,min, max,size,onChanging, onChanged) {
 		this.title = title;
 		this.name = name;
 		this.minimum = min;
@@ -16,7 +11,9 @@ RotaryDial.prototype.create = function(title,parent,name,min, max,size,onChangin
 		this.doChanged = onChanged;
 		this.initialized = false;
 		this.initCanvas();
-	};
+};
+
+
 	
 RotaryDial.prototype.initCanvas = function () {
 		// console.log("Initializing canvas...");
@@ -155,13 +152,6 @@ RotaryDial.prototype.drawDial = function (center, radius) {
 	var metrics = this.gMoving.measureText(text);
     var offset = metrics.width/2;
 	this.gMoving.fillText(text, lcenter.x-offset, lcenter.y+0.2*this.height);
-	
-	this.gMoving.fillStyle = "white";
-	this.gMoving.font = "" + Math.round(this.size)/10 + "px Arial";
-	text = this.title;
-	metrics = this.gMoving.measureText(text);
-	offset = metrics.width/2;
-	this.gMoving.fillText(text, lcenter.x-offset, this.height-10);
 };
 	
 	
