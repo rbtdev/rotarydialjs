@@ -40,10 +40,11 @@ RotaryDial.prototype.initCanvas = function () {
 		this.parentDiv.appendChild(this.canvasMoving);
 		this.parentDiv.appendChild(this.canvasFrame);
 			
-		if (!this.canvasShape || !this.canvasBack || !this.canvasMoving) {
+/* 		if (!this.canvasShape || !this.canvasBack || !this.canvasMoving) {
 			setTimeout(this.initCanvas.bind(this), 100);
-		}
+		} 
 		else {
+*/
 			if (this.size == undefined) this.size = 100;
 			if (this.minimum == undefined) this.minimum = 0;
 			if (this.maximum == undefined) this.maximum = 1;
@@ -83,7 +84,7 @@ RotaryDial.prototype.initCanvas = function () {
 			this.rotationStop = false;
 			this.grabPoint = this.circlePoint(this.position);
 			this.drawDial({x:0, y:0}, 100);
-		}
+//		}
 	};
 	
 RotaryDial.prototype.drawDial = function (center, radius) {
