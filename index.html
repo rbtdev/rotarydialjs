@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src = "js/rotarydial.js"></script>
+	</head>
+	<body>
+		<div id = "dialdiv">
+		</div>
+		<div>
+			Value Changing = 
+			<span id = "valueChanging">
+		</div>	
+			Value Changed = 
+			<span id = "valueChanged">
+		</div>
+		<script>
+			valueChanging = function (dialObj) {
+				document.getElementById('valueChanging').innerText = dialObj.value.toString();
+			};
+			valueChanged = function (dialObj) {
+				document.getElementById('valueChanged').innerText = dialObj.value.toString();
+			};
+			var minValue = 1;
+			var maxValue = 100;
+			var dialSize = 100; // px
+			new RotaryDial("Dial Title","dialdiv", "dialName", 1, 300, 200, valueChanging, valueChanged);
+		</script>
+	</body>
+</html>
