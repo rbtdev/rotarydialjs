@@ -28,6 +28,7 @@ RotaryDial.prototype.initCanvas = function () {
 		this.canvasMoving.addEventListener('mousemove',this.canvasMouseDrag.bind(this), false);
 		this.canvasMoving.addEventListener('touchmove',this.canvasTouchDrag.bind(this), false);
 		this.canvasMoving.addEventListener('mouseup',this.canvasClick.bind(this) , false);
+		this.canvasMoving.addEventListener('touchend',this.canvasClick.bind(this) , false);
 
 		this.canvasFrame = document.createElement("CANVAS");
 		this.canvasFrame.setAttribute("class","dialFrame");
