@@ -21,10 +21,10 @@
 			valueChanged = function (dialObj) {
 				document.getElementById('valueChanged').innerText = dialObj.value.toString();
 			};
-			var minValue = 1;
+			var minValue = 0;
 			var maxValue = 100;
-			var dialSize = 100; // px
-			new RotaryDial("Dial Title","dialdiv", "dialName", 1, 300, 300, valueChanging, valueChanged);
+			var dialSize = 300; // px
+			new RotaryDial("Dial Title","dialdiv", "dialName", minValue, maxValue, dialSize, valueChanging, valueChanged);
 		</script>
 	</body>
 </html>
